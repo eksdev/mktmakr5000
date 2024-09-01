@@ -13,6 +13,7 @@ import plotly.graph_objects as go
 import tensorflow as tf
 from datetime import timedelta
 from prettytable import PrettyTable
+import plotly.io as pio
 
 # Function to fetch stock data using yfinance
 def get_data(ticker, period='3y'):
@@ -460,13 +461,18 @@ st.markdown("""
 
     /* Dataframe Styles */
     .dataframe {
-        background-color: #FAFAFA; /* Very light gray background */
+        background-color: #FFFFFF; /* White background for dataframes */
         color: #333333; /* Dark gray text */
+        border: 1px solid #DDDDDD; /* Light gray border */
+        border-radius: 10px; /* Rounded corners */
+        padding: 10px; /* Padding */
     }
 
     /* Chart Styles */
-    .stPlotlyChart {
-        border: 1px solid #DDDDDD; /* Light gray border for charts */
+    .stPlotlyChart, .stAltairChart, .stPydeckChart, .stGraphVizChart, .stVegaLiteChart {
+        background-color: #FFFFFF !important; /* White background for charts */
+        color: #333333 !important; /* Dark gray text */
+        border: 1px solid #DDDDDD; /* Light gray border */
         border-radius: 10px; /* Rounded corners */
         padding: 10px; /* Padding around charts */
     }
@@ -476,8 +482,16 @@ st.markdown("""
         color: #4CAF50; /* Green slider */
     }
 
+    /* Plotly Graph Styles */
+    .stPlotlyChart .plotly {
+        background-color: #FFFFFF !important; /* White background */
+        color: #333333 !important; /* Black text for axes and labels */
+    }
+
     </style>
     """, unsafe_allow_html=True)
+
+pio.templates.default = "plotly_white"  # Set default template to white
 
 # Set up the Streamlit app
 st.title("Zamson Portfolio Optimizer")
