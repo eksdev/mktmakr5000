@@ -1,4 +1,4 @@
-tensorflow==2.17.0
+tensorflow==2.16.2
 pandas
 numpy
 yfinance
@@ -9,3 +9,5 @@ requests
 beautifulsoup4
 matplotlib
 plotly
+setuptools
+wheel
