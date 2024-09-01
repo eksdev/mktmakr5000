@@ -7,3 +7,5 @@ requests
 matplotlib
 scipy
 plotly
+tensorflow
+prettyTable
