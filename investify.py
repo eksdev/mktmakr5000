@@ -409,6 +409,76 @@ class Dashboard:
         cs = compare_metrics(symbol)
         return cs
 
+# Apply custom CSS for a sleek, modern look
+st.markdown("""
+    <style>
+    /* General Styles */
+    .main {
+        background-color: #FFFFFF; /* White background */
+        color: #333333; /* Dark gray text color */
+        font-family: 'Helvetica Neue', Arial, sans-serif; /* Apple-like sleek font */
+    }
+
+    /* Heading Styles */
+    h1, h2, h3, h4, h5, h6 {
+        color: #4A4A4A; /* Medium dark gray for headings */
+        font-weight: 600; /* Bold text */
+    }
+
+    /* Link Colors */
+    a {
+        color: #1E90FF; /* Bright blue for links */
+    }
+
+    /* Textbox and Input Field Styles */
+    .stTextInput>div>div>input {
+        background-color: #F0F0F0; /* Light gray background */
+        color: #333333; /* Dark gray text */
+        border-radius: 10px; /* Rounded corners */
+        padding: 10px; /* Padding for input fields */
+    }
+
+    /* Button Styles */
+    .stButton>button {
+        background-color: #4CAF50; /* Green background */
+        color: white; /* White text */
+        border-radius: 10px; /* Rounded corners */
+        padding: 10px 20px; /* Padding */
+        font-size: 16px; /* Larger font size */
+        transition: background-color 0.3s ease; /* Smooth hover transition */
+    }
+
+    .stButton>button:hover {
+        background-color: #45A049; /* Slightly darker green on hover */
+    }
+
+    /* Sidebar Styles */
+    .sidebar .sidebar-content {
+        background-color: #F8F8F8; /* Light gray sidebar background */
+        color: #333333; /* Dark gray sidebar text */
+    }
+
+    /* Dataframe Styles */
+    .dataframe {
+        background-color: #FAFAFA; /* Very light gray background */
+        color: #333333; /* Dark gray text */
+    }
+
+    /* Chart Styles */
+    .stPlotlyChart {
+        border: 1px solid #DDDDDD; /* Light gray border for charts */
+        border-radius: 10px; /* Rounded corners */
+        padding: 10px; /* Padding around charts */
+    }
+
+    /* Customize the slider appearance */
+    .stSlider>div>div>input {
+        color: #4CAF50; /* Green slider */
+    }
+
+    </style>
+    """, unsafe_allow_html=True)
+
 # Set up the Streamlit app
 st.title("Zamson Portfolio Optimizer")
 page = st.selectbox("Choose a page:", ["Optimization", "Research", "Projection"])
