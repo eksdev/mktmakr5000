@@ -1,11 +1,11 @@
+tensorflow==2.16.2
 pandas
 numpy
 yfinance
-streamlit
-beautifulsoup4
-requests
-matplotlib
 scipy
-plotly
-tensorflow==2.12.0
 prettytable
+streamlit
+requests
+beautifulsoup4
+matplotlib
+plotly
