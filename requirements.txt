@@ -1,4 +1,4 @@
-tensorflow==2.16.2
+tensorflow
 pandas
 numpy
 yfinance
